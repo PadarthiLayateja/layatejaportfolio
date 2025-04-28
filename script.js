@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation
+    // ==================== Mobile Navigation ====================
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.remove('active');
         });
     });
-    
-    // Navbar scroll effect
+
+    // ==================== Navbar Scroll Effect ====================
     window.addEventListener('scroll', function() {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('scrolled');
         }
     });
-    
-    // Animate progress bars when section comes into view
+
+    // ==================== Progress Bars Animation ====================
     const skillItems = document.querySelectorAll('.skill-item');
     
     function animateProgressBars() {
@@ -42,8 +42,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     }
+
+    // ==================== Timeline Animation ====================
+    const timelineItems = document.querySelectorAll('.timeline-item');
     
-    // Intersection Observer for scroll animations
+    function animateTimelineItems() {
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (itemTop < windowHeight - 100) {
+                item.classList.add('visible');
+            }
+        });
+    }
+
+    // ==================== Intersection Observer ====================
     const observerOptions = {
         threshold: 0.1
     };
@@ -53,9 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 
-                // Special case for skills section to animate progress bars
+                // Special cases for specific sections
                 if (entry.target.id === 'skills') {
                     animateProgressBars();
+                }
+                if (entry.target.classList.contains('timeline-item')) {
+                    // Additional timeline animation if needed
                 }
                 
                 observer.unobserve(entry.target);
@@ -63,12 +80,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe all sections with animation classes
-    document.querySelectorAll('.timeline-item, .section').forEach(section => {
-        observer.observe(section);
+    // Observe all animatable elements
+    document.querySelectorAll(
+        '.timeline-item, .section, .skill-item, [data-animate]'
+    ).forEach(element => {
+        observer.observe(element);
     });
-    
-    // Smooth scrolling for anchor links
+
+    // ==================== Scroll Event Listeners ====================
+    window.addEventListener('scroll', function() {
+        // As a fallback for older browsers
+        animateTimelineItems();
+    });
+
+    // ==================== Smooth Scrolling ====================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -85,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Form submission handling
+
+    // ==================== Form Handling ====================
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -104,9 +129,19 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         });
     }
+
+    // ==================== Initial Animations ====================
+    // Initial check for elements in viewport
+    animateTimelineItems();
     
-    // Initialize animations on page load
+    // Body loaded class for initial transitions
     setTimeout(() => {
         document.querySelector('body').classList.add('loaded');
     }, 200);
+
+    // Initial progress bars animation if skills section is visible
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection && skillsSection.getBoundingClientRect().top < window.innerHeight) {
+        animateProgressBars();
+    }
 });
