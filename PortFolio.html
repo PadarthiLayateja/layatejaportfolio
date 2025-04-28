@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
+    
     <!-- Navigation -->
     <nav id="navbar">
         <div class="container">
@@ -15,7 +16,9 @@
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
                 <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
                 <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -26,56 +29,59 @@
             </button>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <header id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 style="margin-top: 80px;">Hi, I'm Padarthi <span>Layateja</span></h1>
-                <h2>Computer Science Student</h2>
-                <p>Passionate about problem-solving, data analysis, and continuous learning in emerging technologies.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/layateja-padarthi/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/PadarthiLayateja"><i class="fab fa-github"></i></a>
-                </div>
-                <a href="#contact" class="btn">Get In Touch</a>
+<!-- Hero Section -->
+<header id="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 style="margin-top: 80px;">Hi, I'm <span>Layateja</span></h1>
+            <h2>Software Engineer | Data Analyst</h2>
+            <p>I am a passionate Computer Science student specializing in software development, with practical experience gained through diverse projects and certifications.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/layateja-padarthi-"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/PadarthiLayateja"><i class="fab fa-github"></i></a>
             </div>
-            <div class="hero-image">
-                <img src="img.jpeg" alt="Padarthi Layateja" class="profile-pic">
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+        <div class="hero-image">
+            <img src="img.jpeg" alt="Padarthi Layateja" class="profile-pic">
+        </div>
+    </div>
+</header>
+
+
+   <!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>A highly motivated Computer Science Engineering student specializing in Python, Data Structures & Algorithms, and data visualization tools like Tableau and Excel. Dedicated to problem-solving and data-driven decision-making, always eager to expand analytical skills through emerging technologies. Outside academics, I enjoy traveling and music for inspiration.</p>
+                <div class="about-details">
+                    <div><span>Name:</span><p>Padarthi Layateja</p></div>
+                    <div><span>Email:</span><p>layatejapadarthi@gmail.com</p></div>
+                    <div><span>From:</span><p>Gudur, Andhra Pradesh, India</p></div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h3>3+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3+</h3>
+                    <p>Certifications</p>
+                </div>
+                <div class="stat-item">
+                    <h3>150+</h3>
+                    <p>Hours Coding</p>
+                </div>
             </div>
         </div>
-    </header>
+        <!-- Download CV Button -->
+        <a href="cv.pdf" download class="btn download-btn">Download CV</a>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>A highly motivated Computer Science Engineering student specializing in Python, Data Structures & Algorithms, and data visualization tools like Tableau and Excel. Dedicated to problem-solving and data-driven decision-making, always eager to expand analytical skills through emerging technologies. Outside academics, I enjoy traveling and music for inspiration.</p>
-                    <div class="about-details">
-                        <div><span>Name:</span><p>Padarthi Layateja</p></div>
-                        <div><span>Email:</span><p>layatejapadarthi@gmail.com</p></div>
-                        <div><span>From:</span><p>Gudur, Andhra Pradesh, India</p></div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>3+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>5</h3>
-                        <p>Certifications</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>150+</h3>
-                        <p>Hours Coding</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section">
@@ -121,7 +127,7 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <img src="excel.png" alt="Excel" class="skill-icon">
+                                <img src="excel.jpg" alt="Excel" class="skill-icon">
                                 <span>Excel</span><span>85%</span>
                             </div>
                             <div class="progress-bar">
@@ -169,7 +175,7 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <img src="teamwork.png" alt="Teamwork" class="skill-icon">
+                                <img src="teamwork.jpg" alt="Teamwork" class="skill-icon">
                                 <span>Teamwork</span><span>85%</span>
                             </div>
                             <div class="progress-bar">
@@ -182,31 +188,40 @@
             </div>
         </div>
     </section>
-    
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="achievements-container">
-                <div class="achievement-item">
-                    <h3>Winner - Hackathon 2024</h3>
-                    <p>Led a team of 4 and won 1st place in a national-level hackathon by building an AI-based health monitoring app.</p>
+
+    <!-- Certifications Section -->
+<section id="certifications" class="section">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certifications-container">
+            <div class="certification-item">
+                <i class="fas fa-certificate"></i>
+                <div class="certification-info">
+                    <h3>Supervised Machine Learning</h3>
+                    <p>Coursera | Nov’ 2024</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/TMZRYF30KPOT" target="_blank" class="btn">View Certificate</a>
                 </div>
-                <div class="achievement-item">
-                    <h3>Tableau Certified Data Analyst</h3>
-                    <p>Completed Tableau certification with distinction, showcasing expertise in creating complex dashboards and visualizations.</p>
+            </div>
+            <div class="certification-item">
+                <i class="fas fa-certificate"></i>
+                <div class="certification-info">
+                    <h3>Data Structures and Algorithms</h3>
+                    <p>Udemy | Nov’ 2023</p>
+                    <a href="https://www.udemy.com/certificate/UC-45dba902-4d2f-4d8e-8a0e-5c2c1a99a0b7/" target="_blank" class="btn">View Certificate</a>
                 </div>
-                <div class="achievement-item">
-                    <h3>Python Programming Certification</h3>
-                    <p>Certified by Coursera (offered by University of Michigan) after completing an intensive Python programming course.</p>
-                </div>
-                <div class="achievement-item">
-                    <h3>Internship - Data Analyst at XYZ Corp</h3>
-                    <p>Successfully completed a 3-month internship, analyzed large datasets, and presented actionable insights to the management team.</p>
+            </div>
+            <div class="certification-item">
+                <i class="fas fa-certificate"></i>
+                <div class="certification-info">
+                    <h3>Data Analysis with Tableau</h3>
+                    <p>Coursera | Nov’ 2024</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/PN69MF2VSUSQ" target="_blank" class="btn">View Certificate</a>
                 </div>
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
+
 
     <!-- Projects Section -->
     <section id="projects" class="section">
@@ -215,7 +230,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="project1.jpg" alt="Car Data Analysis">
+                        <img src="project1.PNG" alt="Car Data Analysis">
                     </div>
                     <div class="project-info">
                         <h3>Car Data Analysis Dashboard</h3>
@@ -224,7 +239,6 @@
                             <span>Python</span><span>R</span><span>MySQL</span><span>Tableau</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fas fa-link"></i> Live Demo</a>
                             <a href="#"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
@@ -240,14 +254,13 @@
                             <span>Tableau</span><span>Excel</span><span>SQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fas fa-link"></i> Live Demo</a>
                             <a href="#"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="project3.jpg" alt="Ludo Game Python">
+                        <img src="project3.png" alt="Ludo Game Python">
                     </div>
                     <div class="project-info">
                         <h3>Ludo Game Simulation</h3>
@@ -256,7 +269,6 @@
                             <span>Python</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fas fa-link"></i> Live Demo</a>
                             <a href="#"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
@@ -265,39 +277,66 @@
         </div>
     </section>
     
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug’ 2022 – Present</div>
-                    <div class="timeline-content">
-                        <h3>B.Tech in Computer Science and Engineering</h3>
-                        <h4>Lovely Professional University</h4>
-                        <p>CGPA: 6.75</p>
-                    </div>
+    <!-- Achievements Section -->
+<section id="achievements" class="section">
+    <div class="container">
+        <h2 class="section-title">Achievements</h2>
+        <div class="achievements-content">
+            <div class="achievement-item">
+                <i class="fas fa-hands-helping"></i>
+                <div>
+                    <h3>Volunteer Member</h3>
+                    <p>RRCT Foundation</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Mar’ 2020 – May’ 2022</div>
-                    <div class="timeline-content">
-                        <h3>Intermediate (PCM)</h3>
-                        <h4>Narayana Junior College</h4>
-                        <p>Percentage: 86%</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr’ 2019 – Mar’ 2020</div>
-                    <div class="timeline-content">
-                        <h3>Matriculation</h3>
-                        <h4>Narayana School</h4>
-                        <p>Completed 10th grade</p>
-                    </div>
+            </div>
+            <div class="achievement-item">
+                <i class="fas fa-award"></i>
+                <div>
+                    <h3>HackerRank Badges</h3>
+                    <ul>
+                        <li><strong>C++:</strong> Gold (★★★★★)</li>
+                        <li><strong>Problem Solving:</strong> Gold (★★★★★)</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+   <!-- Education Section -->
+<section id="education" class="section">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">Aug 2022 – Present</div>
+                <div class="timeline-content">
+                    <h3>B.Tech in Computer Science and Engineering</h3>
+                    <h4>Lovely Professional University</h4>
+                    <p>CGPA: 6.75</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Mar 2020 – May 2022</div>
+                <div class="timeline-content">
+                    <h3>Intermediate (PCM)</h3>
+                    <h4>Narayana Junior College</h4>
+                    <p>Percentage: 86%</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Apr 2019 – Mar 2020</div>
+                <div class="timeline-content">
+                    <h3>Matriculation</h3>
+                    <h4>Narayana School</h4>
+                    <p>Completed 10th grade</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="section">
@@ -366,7 +405,7 @@
                 <div class="footer-social">
                     <h3>Connect With Me</h3>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/layateja-padarthi/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/layateja-padarthi-"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/PadarthiLayateja"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
@@ -378,5 +417,6 @@
     </footer>
 
     <script src="portfolio.js"></script>
+
 </body>
 </html>
