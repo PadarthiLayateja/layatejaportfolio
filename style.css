@@ -1108,3 +1108,48 @@ footer {
         right: auto;
     }
 }
+
+/* Training Section Styles */
+#training .certification-item {
+    transition: var(--transition);
+}
+
+#training .certification-item:hover {
+    transform: translateY(-5px);
+}
+
+.training-details {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.training-details li {
+    position: relative;
+    margin-bottom: 8px;
+    list-style-type: none;
+    padding-left: 25px;
+}
+
+.training-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.tech-stack span {
+    background: var(--light-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
